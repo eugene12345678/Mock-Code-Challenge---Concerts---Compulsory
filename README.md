@@ -80,4 +80,17 @@ To see how the system works, you can run the provided example usage script:
 python3 main.py
 ```
 This script demonstrates various functionalities such as adding concerts, retrieving band details, and checking venue information.
+2. **Interact with the Classes**
+
+You can import and use the classes in your Python scripts:
+```python
+from band import Band
+from concert import Concert
+from venue import Venue
+
+# Example usage:
+band = Band(id=1, name='Cybersecurities', hometown='Kenya')
+concerts = band.get_concerts()
+print(concerts)
+```
 
