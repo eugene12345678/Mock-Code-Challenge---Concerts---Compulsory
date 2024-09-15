@@ -41,14 +41,19 @@ class Concert:
             return result[0] > 0
 
     def introduction(self):
-       with sqlite3.connect('concerts.db') as connection:
-            cursor = connection.cursor()       # Provide an introduction message for the concert
-            cursor.execute('''
-                SELECT venues.city, bands.name, bands.hometown
-                FROM concerts
-                JOIN bands ON concerts.band_id = bands.id
-                JOIN venues ON concerts.venue_id = venues.id
-                WHERE concerts.id = ?;
-            ''', (self.id,))
-            venue_city, band_name, band_hometown = cursor.fetchone()
+        with sqlite3.connect('concerts.db') as connection:
+         cursor = connection.cursor()
+         cursor.execute('''
+            SELECT venues.city, bands.name, bands.hometown
+            FROM concerts
+            JOIN bands ON concerts.band_id = bands.id
+            JOIN venues ON concerts.venue_id = venues.id
+            WHERE concerts.id = ?;
+        ''', (self.id,))
+        result = cursor.fetchone()
+        if result:
+            venue_city, band_name, band_hometown = result
             return f"Hello {venue_city}!!!!! We are {band_name} and we're from {band_hometown}"
+        else:
+            return "Concert information is not available."
+
