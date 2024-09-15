@@ -70,3 +70,14 @@ If you need to install any additional Python packages, you can use:
 ```bash
 pip install -r requirements.txt
 ```
+
+## Usage
+Commit: Added example usage script to demonstrate functionality
+1. **Run the Example Script**
+
+To see how the system works, you can run the provided example usage script:
+```bash
+python3 main.py
+```
+This script demonstrates various functionalities such as adding concerts, retrieving band details, and checking venue information.
+
