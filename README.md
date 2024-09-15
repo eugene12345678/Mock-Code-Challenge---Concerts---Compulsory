@@ -63,3 +63,10 @@ CREATE TABLE concerts (
     FOREIGN KEY (venue_id) REFERENCES venues(id)
 );
 ```
+4. **Install Required Packages**
+
+If you need to install any additional Python packages, you can use:
+
+```bash
+pip install -r requirements.txt
+```
