@@ -102,5 +102,8 @@ Contributions are welcome! Please fork the repository and submit a pull request 
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
+## AUTHOR
+[Eugene Mathenge](https://github.com/eugene12345678)
+
 
 
